@@ -33,6 +33,7 @@ df = df[df['state'] == state]
 fig = px.line(df, x="date", y=column, title=column + ' - ' + state)
 fig.update_layout(xaxis_title='Data', yaxis_title=column.upper(), title = {'x':0.5})
 
+# Streamlit Settings
 st.title('DADOS COVID - BRASIL')
 st.plotly_chart(fig, use_container_width=True)
 st.caption('Os dados foram obtidos a partir do site: https://github.com/wcota/covid19br')
